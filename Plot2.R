@@ -11,7 +11,6 @@ subpower[1441:2880,"Time"] <- format(subpower[1441:2880,"Time"],"2007-02-02 %H:%
 
 
 # calling the basic plot function
+png("Plot2.png", width=480, height=480)
 plot(subpower$Time,as.numeric(as.character(subpower$Global_active_power)),type="l",xlab="",ylab="Global Active Power (kilowatts)") 
-
-# annotating graph
-title(main="Global Active Power Vs Time")
+dev.off()
